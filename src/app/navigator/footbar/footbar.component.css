@@ -6,7 +6,8 @@
 	flex-wrap: nowrap;
 	position: relative;
 	bottom: 0;
-  font-size: small;
+	font-size: small;
+  min-height: 3rem;
 }
 
 .footbar-social-links {
@@ -24,25 +25,25 @@
 	position: absolute;
 	left: 0.5rem;
 	bottom: 0;
+	font-weight: bold;
 }
-
 
 .footbar-content {
 	display: center;
 	margin: 0.5rem;
 	left: 0.5rem;
-  text-align: center;
+	text-align: center;
 	padding: 1rem;
 }
 
 @media (max-width: 600px) {
-   .footbar-content {
-    display: none;
-  }
-
+	.footbar-content {
+		display: none;
+	}
 }
+
 @media (max-width: 300px) {
-  .footbar-social-links {
-    display: none;
-  }
+	.footbar-social-links {
+		display: none;
+	}
 }

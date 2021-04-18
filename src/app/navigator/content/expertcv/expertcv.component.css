@@ -1,0 +1,54 @@
+.flex-container {
+	display: flex;
+  flex-wrap:nowrap;
+  font-size: medium;
+	background-color: grey;
+}
+
+.flex-item-left {
+	flex: 20%;
+	padding: 0.5rem;
+}
+
+.flex-item-middle {
+	flex: 75%;
+	padding: 0.5rem;
+  background-color: darkgray;
+  margin: 0.1rem;
+}
+
+.flex-item-right {
+	flex: 20%;
+  padding: 0.5rem;
+}
+
+.navigation-left {
+	position: sticky;
+	top: 0rem;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 20px 20px;
+}
+
+/* drop element on small screen*/
+@media (max-width: 600px) {
+	/* use can also use .flex-container div:nth-of-type(1) */
+	.flex-item-left {
+		display: none;
+	}
+	.flex-item-middle {
+		flex: 100%;
+	}
+
+	.grid-container {
+		display: block;
+	}
+}
+@media (max-width: 1000px) {
+	.flex-item-right {
+		display: none;
+	}
+}

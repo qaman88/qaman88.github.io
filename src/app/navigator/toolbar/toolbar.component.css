@@ -1,11 +1,11 @@
 
 	.toolbar {
 		display: flex;
-		flex-wrap: wrap;
 		background-color: grey;
 		padding: 0.5rem;
     flex-wrap:nowrap;
     position: sticky;
+    margin-bottom: .5rem;
 	}
 
 	.toolbar-menu-icon {
