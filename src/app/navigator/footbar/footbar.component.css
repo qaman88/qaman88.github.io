@@ -1,0 +1,48 @@
+.footbar {
+	background-color: grey;
+	padding: 0.5rem;
+	margin-top: 1rem;
+	margin-bottom: 0.5rem;
+	flex-wrap: nowrap;
+	position: relative;
+	bottom: 0;
+  font-size: small;
+}
+
+.footbar-social-links {
+	display: flex;
+	flex-direction: row-reverse;
+	margin: 0.5rem;
+	position: absolute;
+	right: 0.5rem;
+	bottom: 0;
+}
+
+.footbar-copyright {
+	display: flex;
+	margin: 0.5rem;
+	position: absolute;
+	left: 0.5rem;
+	bottom: 0;
+}
+
+
+.footbar-content {
+	display: center;
+	margin: 0.5rem;
+	left: 0.5rem;
+  text-align: center;
+	padding: 1rem;
+}
+
+@media (max-width: 600px) {
+   .footbar-content {
+    display: none;
+  }
+
+}
+@media (max-width: 300px) {
+  .footbar-social-links {
+    display: none;
+  }
+}
