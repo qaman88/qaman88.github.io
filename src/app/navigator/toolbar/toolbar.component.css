@@ -4,7 +4,8 @@
 		background-color: grey;
 		padding: 0.5rem;
     flex-wrap:nowrap;
-    position: sticky;
+    position: fixed sticky;
+    top: 0;
     margin-bottom: .5rem;
 	}
 
@@ -27,7 +28,10 @@
 	}
 
 	.item {
+    text-decoration: none;
 		margin: 0.5rem;
+    color: black;
+    font-weight: bold;
 	}
 
   .item:hover {

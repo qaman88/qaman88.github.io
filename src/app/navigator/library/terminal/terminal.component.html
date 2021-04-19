@@ -1,0 +1,5 @@
+<div class="container mb-4">
+	<div class="terminal" [ngSwitch]="getTerminalContent">
+		<pre *ngSwitchDefault>{{getTerminalContent()}}</pre>
+	</div>
+</div>

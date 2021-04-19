@@ -1,0 +1,62 @@
+.card-frame {
+	border: 0.25rem solid grey;
+	border-radius: 0.25rem;
+	margin-bottom: 0.5rem;
+	background-color: grey;
+}
+
+.card-title {
+	font-size: large;
+	font-weight: bold;
+	padding: 0.5rem;
+}
+
+.card-content {
+	background-color: darkgrey;
+}
+
+.card-collapse-icon {
+	margin: 2px;
+	text-align: center;
+	float: right;
+}
+
+.card-image {
+	align-content: center;
+	text-align: center;
+	margin: 0.5rem;
+}
+
+.card-article {
+	padding: 0.5rem;
+	font-size: large;
+}
+
+.card-items {
+	padding: 0.5rem;
+}
+
+.card-item {
+	margin: 0.25rem;
+	padding: 0.5rem;
+	border: 1px solid grey;
+	border-radius: 0.25rem;
+	font-weight: bold;
+}
+
+.card-tags {
+	background-color: grey;
+	padding: 1rem;
+}
+
+.card-tag {
+	color: black;
+	background-color: darkgrey;
+	margin: 0.25rem;
+	padding: 0.25rem;
+	border-radius: 0.25rem;
+	display: inline-block;
+	min-width: 5rem;
+	text-align: center;
+	font-size: small;
+}

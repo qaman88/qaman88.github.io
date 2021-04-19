@@ -1,0 +1,62 @@
+<!-- card frame -->
+<div *ngIf="data" class="card-frame">
+	<!-- title -->
+	<div *ngIf="data.title" class="card-title" (click)="onToggleCollapse()">
+		<span> {{ data.title }} </span>
+		<span class="card-collapse-icon">
+			<span *ngIf="collapse" class="material-icons"> unfold_more </span>
+			<span *ngIf="!collapse" class="material-icons"> unfold_less </span>
+		</span>
+	</div>
+
+	<!-- card content -->
+	<div class="card-content">
+		<!-- image -->
+		<div *ngIf="data.image" class="card-image">
+			<img
+				*ngIf="data.image.width && data.image.height"
+				class="card-image"
+				src="{{ data.image.src }}"
+				width="{{ data.image.width }}"
+				height="{{ data.image.height }}"
+			/>
+			<img
+				*ngIf="data.image.width && !data.image.height"
+				class="card-image"
+				src="{{ data.image.src }}"
+				width="{{ data.image.width }}"
+			/>
+			<img
+				*ngIf="!data.image.width && data.image.height"
+				class="card-image"
+				src="{{ data.image.src }}"
+				height="{{ data.image.height }}"
+			/>
+			<img
+				*ngIf="!data.image.width && !data.image.height"
+				class="card-image"
+				src="{{ data.image.src }}"
+				width="100"
+				height="100"
+			/>
+		</div>
+
+		<!-- articles -->
+		<div class="card-article">{{ data.article }}</div>
+		<!-- card addons -->
+		<div *ngIf="!collapse" class="card-addons">
+			<!-- items -->
+			<div *ngIf="data.items" class="card-items">
+				<span *ngFor="let item of data.items">
+					<div class="card-item">{{ item }}</div>
+				</span>
+			</div>
+			<!-- tags -->
+			<div *ngIf="data.tags" class="card-tags">
+				<span *ngFor="let tag of data.tags">
+					<span class="card-tag"> {{ tag }}</span>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>

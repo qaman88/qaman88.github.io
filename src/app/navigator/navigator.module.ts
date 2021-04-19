@@ -9,10 +9,11 @@ import {SociallinksComponent} from "./sociallinks/sociallinks.component";
 import {EducationComponent} from "./content/expertcv/education/education.component";
 import {InfobarComponent} from "./content/expertcv/infobar/infobar.component";
 import {IntroductionComponent} from "./content/expertcv/introduction/introduction.component";
-import {ProjectsComponent} from "./content/expertcv/projects/projects.component";
 import {SkillsComponent} from "./content/expertcv/skills/skills.component";
 import { ExperienceComponent } from "./content/expertcv/experience/experience.component";
 import { ExpertCVComponent } from "./content/expertcv/expertcv.component";
+import { CardComponent } from './library/card/card.component';
+import { TerminalComponent } from './library/terminal/terminal.component';
 
 @NgModule({
 	declarations: [
@@ -25,9 +26,10 @@ import { ExpertCVComponent } from "./content/expertcv/expertcv.component";
 		EducationComponent,
 		SkillsComponent,
 		ExperienceComponent,
-		ProjectsComponent,
 		InfobarComponent,
-    ExpertCVComponent
+    ExpertCVComponent,
+    CardComponent,
+    TerminalComponent
 	],
 	imports: [CommonModule, BrowserModule],
 	bootstrap: [NavigatorComponent],

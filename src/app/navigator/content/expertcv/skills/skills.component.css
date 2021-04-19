@@ -1,0 +1,28 @@
+.skills-frame {
+	background-color: grey;
+	border: 5px solid grey;
+	border-radius: 5px;
+}
+
+.skill-item {
+	min-height: 8rem;
+	background-color: darkgrey;
+}
+
+.skill-item-title {
+	background-color: grey;
+	display: block;
+	font-weight: bold;
+  padding: .5rem;
+}
+
+.skill-item-summary {
+	padding: 0.25rem;
+	display: block;
+}
+
+.skill-player {
+	background-color: grey;
+  text-align: center;
+  padding: 0.25rem;
+}

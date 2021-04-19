@@ -1,1 +1,22 @@
-<p>experience works!</p>
+<div class="experiences-frame">
+	<div class="experience-item">
+		<app-card [data]="data[current]" [collapse]="false"></app-card>
+	</div>
+
+	<div class="experience-player">
+		<button (click)="onBack()">
+			<span class="material-icons"> skip_previous </span>
+		</button>
+		<span>
+			<button *ngIf="autoplay" (click)="onTogglePlay()">
+				<span class="material-icons"> pause_circle </span>
+			</button>
+			<button *ngIf="!autoplay" (click)="onTogglePlay()">
+				<span class="material-icons"> play_circle </span>
+			</button>
+		</span>
+		<button (click)="onNext()">
+			<span class="material-icons"> skip_next</span>
+		</button>
+	</div>
+</div>

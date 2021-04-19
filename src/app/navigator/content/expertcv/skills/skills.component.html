@@ -1,1 +1,27 @@
-<p>skills works!</p>
+<div class="skills-frame">
+	<div class="skill-item">
+		<span class="skill-item-title">
+			{{ data[current].title }}
+		</span>
+		<span class="skill-item-summary">
+			{{ data[current].summary }}
+		</span>
+	</div>
+
+	<div class="skill-player">
+		<button (click)="onBack()">
+			<span class="material-icons"> skip_previous </span>
+		</button>
+		<span>
+			<button *ngIf="autoplay" (click)="onTogglePlay()">
+				<span  class="material-icons"> pause_circle </span>
+			</button>
+			<button *ngIf="!autoplay" (click)="onTogglePlay()">
+				<span class="material-icons" > play_circle </span>
+			</button>
+		</span>
+		<button (click)="onNext()">
+			<span class="material-icons"> skip_next</span>
+		</button>
+	</div>
+</div>
