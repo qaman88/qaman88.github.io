@@ -11,7 +11,7 @@ export class ExperienceComponent implements OnInit {
 	// data
 	data = [];
 	current = 0;
-	autoplay = true;
+	autoplay = false;
 	timer: any = undefined;
 
 	// constructor

@@ -14,7 +14,7 @@ export class SkillsComponent implements OnInit {
 	// data
 	data: Skill[] = [];
 	current = 0;
-	autoplay = true;
+	autoplay = false;
 	timer: any = undefined;
 
 	// constructor
