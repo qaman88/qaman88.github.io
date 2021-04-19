@@ -18,7 +18,7 @@ export class EducationComponent implements OnInit {
 		this.getItems();
 	}
 
-	getItems() {
+	getItems(): void{
 		for (const key in EducationItems) {
 			if (key) {
 				// extract Education item
@@ -26,7 +26,7 @@ export class EducationComponent implements OnInit {
 					title: EducationItems[key].Title,
 					article: EducationItems[key].Description,
 					image: {src: EducationItems[key].ImageSource, width: 100, height: 100},
-					items: [EducationItems[key].Institution, EducationItems[key].Certificate,EducationItems[key].Year],
+					items: [EducationItems[key].Institution, EducationItems[key].Certificate, EducationItems[key].Year],
 				};
 
 				// add Education item to data

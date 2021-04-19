@@ -15,14 +15,14 @@ export interface Card {
 	styleUrls: ["./card.component.css"],
 })
 export class CardComponent implements OnInit {
-  @Input() collapse: boolean = false;
+  @Input() collapse = false;
 	@Input() data: Card;
 
 	constructor() {}
 
 	ngOnInit(): void {}
 
-  onToggleCollapse() {
+  onToggleCollapse(): void  {
     this.collapse = !this.collapse;
   }
 }

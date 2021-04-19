@@ -13,8 +13,8 @@ export interface Personal {
 })
 export class IntroductionComponent implements OnInit {
 	// data
-	terminalContent: string = `$ echo "welcome"  \n  >> Welcome to Expert CV`;
-	count: number = 0;
+	terminalContent = `$ echo "welcome"  \n  >> Welcome to Expert CV`;
+	count = 0;
 	timer: any = undefined;
 	personalItems: Personal[] = [];
 
@@ -24,7 +24,7 @@ export class IntroductionComponent implements OnInit {
 	// onInit
 	ngOnInit(): void {
     this.getItems();
-		this.timer = setInterval(() => this.onTimerEvent(), 2500);
+		  this.timer = setInterval(() => this.onTimerEvent(), 2500);
 	}
 
   // retrieve personal information
@@ -44,7 +44,7 @@ export class IntroductionComponent implements OnInit {
   }
 
   // timer event
-  onTimerEvent() {
+  onTimerEvent(): void {
 		if (this.personalItems[this.count]) {
 			this.terminalContent += `\n$ echo "${this.personalItems[this.count].id}"	\n >> ${this.personalItems[this.count].value}`;
 			this.count++;
@@ -57,7 +57,7 @@ export class IntroductionComponent implements OnInit {
   }
 
 	// terminal content
-	getTerminalContent() {
+	getTerminalContent(): string {
 		return this.terminalContent;
 	}
 }

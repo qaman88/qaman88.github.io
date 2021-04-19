@@ -9,6 +9,6 @@ export class NavigatorComponent implements OnInit {
   // constructor
   constructor() {}
 
-  // onInit 
+  // onInit
 	ngOnInit(): void {}
 }

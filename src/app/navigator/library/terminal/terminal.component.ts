@@ -1,9 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-terminal',
-  templateUrl: './terminal.component.html',
-  styleUrls: ['./terminal.component.css']
+  selector: "app-terminal",
+  templateUrl: "./terminal.component.html",
+  styleUrls: ["./terminal.component.css"]
 })
 
 export class TerminalComponent implements OnInit {
@@ -18,7 +18,7 @@ export class TerminalComponent implements OnInit {
   }
 
   // terminal content
-  getTerminalContent() {
+  getTerminalContent(): string {
 		return this.content;
 	}
 }

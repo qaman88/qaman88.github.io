@@ -13,8 +13,8 @@ export interface Skill {
 export class SkillsComponent implements OnInit {
 	// data
 	data: Skill[] = [];
-	current: number = 0;
-	autoplay: boolean = true;
+	current = 0;
+	autoplay = true;
 	timer: any = undefined;
 
 	// constructor
@@ -27,7 +27,7 @@ export class SkillsComponent implements OnInit {
 	}
 
 	// timer event
-	onTimerEvent() {
+	onTimerEvent(): void {
 		if (this.autoplay) {
 			if (this.current + 1 >= this.data.length - 1) {
 				this.current = 0;
@@ -36,9 +36,9 @@ export class SkillsComponent implements OnInit {
 			}
 		}
 	}
-  
+
 	// get items
-	getItems() {
+	getItems(): void {
 		for (const key in SkillItems) {
 			if (key) {
 				// extract Skill item
@@ -53,17 +53,17 @@ export class SkillsComponent implements OnInit {
 		}
 	}
 
-	onBack() {
+	onBack(): void {
 		if (this.current > 0) {
 			--this.current;
 		}
 	}
 
-	onTogglePlay() {
+	onTogglePlay(): void {
 		this.autoplay = !this.autoplay;
 	}
 
-	onNext() {
+	onNext(): void {
 		if (this.current < this.data.length - 1) {
 			++this.current;
 		}
