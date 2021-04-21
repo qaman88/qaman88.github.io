@@ -22,7 +22,8 @@
 }
 
 .skill-player {
-	background-color: grey;
+  background-color: darkgrey;
   text-align: center;
-  padding: 0.25rem;
+  padding: 1rem;
+  margin-top: .5rem;
 }

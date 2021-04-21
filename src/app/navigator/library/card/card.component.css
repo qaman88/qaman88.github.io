@@ -52,6 +52,7 @@
 .card-tag {
 	color: black;
 	background-color: darkgrey;
+  font-weight: bold;
 	margin: 0.25rem;
 	padding: 0.25rem;
 	border-radius: 0.25rem;

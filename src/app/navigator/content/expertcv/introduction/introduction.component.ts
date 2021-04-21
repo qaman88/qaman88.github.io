@@ -1,9 +1,9 @@
 import {Component, OnInit} from "@angular/core";
-import { PersonalItems } from "../mocks/personal";
+import {PersonalItems} from "../mocks/personal";
 
 export interface Personal {
-  id: string;
-  value: string;
+	id: string;
+	value: string;
 }
 
 @Component({
@@ -23,11 +23,21 @@ export class IntroductionComponent implements OnInit {
 
 	// onInit
 	ngOnInit(): void {
-    this.getItems();
-		  this.timer = setInterval(() => this.onTimerEvent(), 2500);
+		this.getItems();
+		this.startTimer();
 	}
 
-  // retrieve personal information
+	startTimer() {
+		this.timer = setInterval(() => this.onTimerEvent(), 3000);
+	}
+
+	stopTimer() {
+		clearInterval(this.timer);
+		this.timer = undefined;
+		this.count = undefined;
+	}
+
+	// retrieve personal information
 	getItems(): void {
 		for (const key in PersonalItems) {
 			if (key) {
@@ -41,20 +51,20 @@ export class IntroductionComponent implements OnInit {
 				this.personalItems.push(item);
 			}
 		}
-  }
+	}
 
-  // timer event
-  onTimerEvent(): void {
+	// timer event
+	onTimerEvent(): void {
 		if (this.personalItems[this.count]) {
-			this.terminalContent += `\n$ echo "${this.personalItems[this.count].id}"	\n >> ${this.personalItems[this.count].value}`;
+			this.terminalContent += `\n$ echo "${this.personalItems[this.count].id}"	\n >> ${
+				this.personalItems[this.count].value
+			}`;
 			this.count++;
 		} else {
 			this.terminalContent += `\n$ echo "The End"	\n  >> Personal information ended, thanks!`;
-			clearInterval(this.timer);
-			this.timer = undefined;
-			this.count = undefined;
+			this.stopTimer();
 		}
-  }
+	}
 
 	// terminal content
 	getTerminalContent(): string {

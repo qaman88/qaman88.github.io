@@ -23,7 +23,15 @@ export class SkillsComponent implements OnInit {
 	// onInit
 	ngOnInit(): void {
 		this.getItems();
+	}
+
+	startTimer() {
 		this.timer = setInterval(() => this.onTimerEvent(), 5000);
+	}
+
+	stopTimer() {
+		clearInterval(this.timer);
+		this.timer = undefined;
 	}
 
 	// timer event
@@ -60,6 +68,11 @@ export class SkillsComponent implements OnInit {
 	}
 
 	onTogglePlay(): void {
+		if (this.autoplay) {
+			this.stopTimer();
+		} else {
+			this.startTimer();
+		}
 		this.autoplay = !this.autoplay;
 	}
 

@@ -1,11 +1,11 @@
-import { Component, OnInit } from "@angular/core";
-import { Card } from "src/app/navigator/library/card/card.component";
-import { ExperienceItems } from "../mocks/experience";
+import {Component, OnInit} from "@angular/core";
+import {Card} from "src/app/navigator/library/card/card.component";
+import {ExperienceItems} from "../mocks/experience";
 
 @Component({
-  selector: "app-experience",
-  templateUrl: "./experience.component.html",
-  styleUrls: ["./experience.component.css"]
+	selector: "app-experience",
+	templateUrl: "./experience.component.html",
+	styleUrls: ["./experience.component.css"],
 })
 export class ExperienceComponent implements OnInit {
 	// data
@@ -19,9 +19,17 @@ export class ExperienceComponent implements OnInit {
 
 	// onInit
 	ngOnInit(): void {
-    this.getItems();
-		  this.timer = setInterval(() => this.onTimerEvent(), 5000);
-  }
+		this.getItems();
+	}
+
+	startTimer() {
+		this.timer = setInterval(() => this.onTimerEvent(), 5000);
+	}
+
+	stopTimer() {
+		clearInterval(this.timer);
+		this.timer = undefined;
+	}
 
 	// timer event
 	onTimerEvent(): void {
@@ -34,7 +42,7 @@ export class ExperienceComponent implements OnInit {
 		}
 	}
 
-  	// get personal items
+	// get personal items
 	getItems(): void {
 		for (const key in ExperienceItems) {
 			if (key) {
@@ -44,24 +52,27 @@ export class ExperienceComponent implements OnInit {
 					items: [ExperienceItems[key].Type, ExperienceItems[key].Duration],
 					article: ExperienceItems[key].Summary,
 					tags: ExperienceItems[key].Tags,
-					image: { src: ExperienceItems[key].ImageSource},
-
+					image: {src: ExperienceItems[key].ImageSource},
 				};
 
 				// add Experience item to data
 				this.data.push(item);
 			}
 		}
-
 	}
 
-	onBack(): void{
+	onBack(): void {
 		if (this.current > 0) {
 			--this.current;
 		}
 	}
 
 	onTogglePlay(): void {
+		if (this.autoplay) {
+			this.stopTimer();
+		} else {
+			this.startTimer();
+		}
 		this.autoplay = !this.autoplay;
 	}
 
