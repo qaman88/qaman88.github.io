@@ -27,11 +27,11 @@ export class IntroductionComponent implements OnInit {
 		this.startTimer();
 	}
 
-	startTimer() {
+	startTimer(): void {
 		this.timer = setInterval(() => this.onTimerEvent(), 3000);
 	}
 
-	stopTimer() {
+	stopTimer(): void {
 		clearInterval(this.timer);
 		this.timer = undefined;
 		this.count = undefined;

@@ -22,11 +22,11 @@ export class ExperienceComponent implements OnInit {
 		this.getItems();
 	}
 
-	startTimer() {
+	startTimer(): void {
 		this.timer = setInterval(() => this.onTimerEvent(), 5000);
 	}
 
-	stopTimer() {
+	stopTimer(): void {
 		clearInterval(this.timer);
 		this.timer = undefined;
 	}
