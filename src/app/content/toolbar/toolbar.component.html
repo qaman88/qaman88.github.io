@@ -4,14 +4,18 @@
 	<div class="toolbar-menu-icon"><span class="material-icons"> menu </span></div>
 
 	<!-- title -->
-		<img src="./../../../assets//icon.png" height="35" />
+	<img
+		class="toolbar-menu-title-icon"
+		routerLink="{{ pages[0].path }}"
+		src="./../../../assets//icon.png"
+	/>
 	<div class="toolbar-menu-title">
-    <span> Expert Waves</span>
+		<span> Expert Waves</span>
 	</div>
 
 	<!-- navigation lins -->
 	<div class="toolbar-menu-items" *ngFor="let page of pages">
-		<a routerLink={{page.path}} class="item">{{page.name}}</a>
+		<a routerLink="{{ page.path }}" class="item">{{ page.name }}</a>
 	</div>
 
 	<!-- social links -->
