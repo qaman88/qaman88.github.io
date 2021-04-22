@@ -6,12 +6,12 @@
 	<!-- title -->
 		<img src="./../../../assets//icon.png" height="35" />
 	<div class="toolbar-menu-title">
-    <span> Expert CV</span>
+    <span> Expert Waves</span>
 	</div>
 
 	<!-- navigation lins -->
-	<div class="toolbar-menu-items">
-		<a href="#" class="item">Home</a>
+	<div class="toolbar-menu-items" *ngFor="let page of pages">
+		<a routerLink={{page.path}} class="item">{{page.name}}</a>
 	</div>
 
 	<!-- social links -->

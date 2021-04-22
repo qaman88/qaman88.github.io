@@ -4,10 +4,10 @@
 	<div class="flex-item-left">
 		<div class="navigation-left">
 			<h3>Navigation</h3>
-			<a href="#Introduction" class="navigation-item">Introduction</a>
-			<a href="#Education" class="navigation-item">Education</a>
-			<a href="#Skills" class="navigation-item">Skills</a>
-			<a href="#Experience" class="navigation-item">Experience</a>
+			<a href="{{ pageUrl }}#Introduction" class="navigation-item">Introduction</a>
+			<a href="{{ pageUrl }}#Education" class="navigation-item">Education</a>
+			<a href="{{ pageUrl }}#Skills" class="navigation-item">Skills</a>
+			<a href="{{ pageUrl }}#Experience" class="navigation-item">Experience</a>
 		</div>
 	</div>
 
@@ -15,7 +15,6 @@
 	<div class="flex-item-middle">
 		<div id="Introduction">
 			<h3>Introduction</h3>
-
 			<app-introduction></app-introduction>
 		</div>
 
@@ -26,22 +25,18 @@
 
 		<div id="Skills">
 			<h3>Skills</h3>
-
 			<app-skills></app-skills>
 		</div>
 
 		<div id="Experience">
 			<h3>Experience</h3>
-
 			<app-experience></app-experience>
 		</div>
-
 	</div>
 
 	<!-- Details Column -->
 	<div class="flex-item-right">
 		<h3>Highlights</h3>
-
 		<app-infobar></app-infobar>
 	</div>
 </div>

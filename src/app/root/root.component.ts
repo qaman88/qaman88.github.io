@@ -2,10 +2,10 @@ import {Component, Input, OnInit} from "@angular/core";
 
 @Component({
 	selector: "app-navigator",
-	templateUrl: "./navigator.component.html",
-	styleUrls: ["./navigator.component.css"],
+	templateUrl: "./root.component.html",
+	styleUrls: ["./root.component.css"],
 })
-export class NavigatorComponent implements OnInit {
+export class RootComponent implements OnInit {
   // constructor
   constructor() {}
 

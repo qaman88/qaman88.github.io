@@ -1,4 +1,6 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
+import { Page, PAGES } from "src/app/root/router.module";
+
 
 @Component({
   selector: "app-toolbar",
@@ -7,9 +9,10 @@ import { Component, OnInit } from "@angular/core";
 })
 export class ToolbarComponent implements OnInit {
 
+  @Input() pages: Page[] = PAGES;
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

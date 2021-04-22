@@ -13,8 +13,7 @@ export class InfobarComponent implements OnInit {
 	Electrical and Computer Engineering. I seek remote opportunity for Software Engineer.",
 		"Experienced with AWS (S3, EC2, Lambda, Cloudwatch, Cloud Formation, DynamoDB, IAM Policy and \
 	Role).",
-		"Web app using JavaScript, Typescript, HTML, CSS, SCSS, Bootstrap and Polaris.",
-		"Express RESTful API and fundamentals of GraphQL API.",
+		"Web app using JavaScript, Typescript, HTML, CSS, SCSS, Bootstrap and Polaris. Express RESTful API and fundamentals of GraphQL API.",
 		"API development with software languages such as C++, \
 	Python, Kotlin, Java, NodeJs; Excellent problem solving skills mainly through researching, team \
 	player, investigation, design, validation.",

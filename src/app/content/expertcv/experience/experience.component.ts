@@ -1,5 +1,5 @@
 import {Component, OnInit} from "@angular/core";
-import {Card} from "src/app/navigator/library/card/card.component";
+import { Card } from "src/app/library/card/card.component";
 import {ExperienceItems} from "../mocks/experience";
 
 @Component({
